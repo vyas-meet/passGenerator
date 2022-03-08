@@ -1,6 +1,7 @@
 const inputEl = document.querySelector("#lengthInput");
 const infoEl = document.querySelector(".info");
 const passContainers = document.querySelectorAll(".pw");
+const copiedEl = document.querySelector(".copied");
 
 const getRandomPassword = () => {
     let pass = "";
@@ -19,6 +20,14 @@ document.querySelector(".generate-btn").addEventListener("click", e => {
     } else {
         passContainers.forEach(el => {
             el.textContent = getRandomPassword();
+            el.addEventListener("click", e => {
+                e.preventDefault();
+                navigator.clipboard.writeText(e.currentTarget.textContent)
+                copiedEl.classList.add("tog")
+                setTimeout(() => {
+                    copiedEl.classList.remove("tog")
+                }, 2000);
+            })
         })
     }
 })

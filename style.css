@@ -84,7 +84,7 @@ svg{
 
 hr{
     /* width: 90%; */
-    margin: 3em auto;
+    margin: 2.5em auto .5em;
     border: 1px solid gray;
 }
 
@@ -101,4 +101,40 @@ hr{
     width: 18em;
     text-align: center;
     border-radius: 4px;
+    cursor: pointer;
+}
+.pw:hover, .pw:focus{
+    background-color: #223b5d;
+}
+
+@media (max-width:800px) {
+    .passwords{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .pass1, .pass3{
+        margin: 0;
+    }
+    .pw{
+        margin: 1em 0;
+    }
+    .pass2{
+        margin-bottom: 0;
+    }
+
+}
+
+.copied{
+    text-align: center;
+    margin: 0 0 2em;
+    opacity: 0;
+    transition: 0.3s opacity ease-in-out;
+    color: #10B981;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+.copied.tog{
+    opacity: 1;
 }
