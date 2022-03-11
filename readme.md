@@ -1,3 +1,1 @@
-A basic metric / imperial converter.
-
-The app is responsive and has a simple dark / light theme functionality set using vanilla CSS & JavaScript.
+A simple password generator that generates a random string based on the input given. User can easily copy the generated password with a click.
